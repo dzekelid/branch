@@ -7,8 +7,8 @@ image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/19810-bitb
 x-kinRank: "8"
 x-alexaRank: "901"
 tags: Branch
-created: "2018-08-25"
-modified: "2018-08-25"
+created: "2018-08-27"
+modified: "2018-08-27"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/branch/master/_listings/bitbucket/apis.md
 specificationVersion: "0.14"
 apis:
@@ -40,6 +40,43 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/branch/master/_listings/bitbucket/repositoriesusernamerepo-slugbranchrestrictions-parameters-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/branch/master/_listings/bitbucket/repositoriesusernamerepo-slugbranchrestrictions-parameters-openapi.md
+- name: Bitbucket - Add Repositories Username Repo Slug Branch Restrictions
+  x-api-slug: repositoriesusernamerepo-slugbranchrestrictions-post
+  description: |-
+    Creates a new branch restriction rule for a repository.
+
+    `kind` describes what will be restricted. Allowed values are: `push`,
+    `force`, `delete`, and `restrict_merges`.
+
+    Different kinds of branch restrictions have different requirements:
+
+    * `push` and `restrict_merges` require `users` and `groups` to be
+      specified. Empty lists are allowed, in which case permission is
+      denied for everybody.
+    * `force` can not be specified in a Mercurial repository.
+
+    `pattern` is used to determine which branches will be restricted.
+
+    A `'*'` in `pattern` will expand to match zero or more characters, and
+    every other character matches itself. For example, `'foo*'` will match
+    `'foo'` and `'foobar'`, but not `'barfoo'`. `'*'` will match all
+    branches.
+
+    `users` and `groups` are lists of user names and group names.
+
+    `kind` and `pattern` must be unique within a repository; adding new
+    users or groups to an existing restriction should be done via `PUT`.
+
+    Note that branch restrictions with overlapping patterns are allowed,
+    but the resulting behavior may be surprising.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/19810-bitbucket.jpg
+  humanURL: http://bitbucket.org
+  baseURL: https://api.bitbucket.org//2.0
+  tags: Imports, Stack Network, Developers, Code, Technology, SaaS, Enterprise, Profiles,
+    Relative Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/branch/master/_listings/bitbucket/repositoriesusernamerepo-slugbranchrestrictions-post-openapi.md
 - name: Bitbucket - Delete Repositories Username Repo Slug Branch Restrictions
   x-api-slug: repositoriesusernamerepo-slugbranchrestrictionsid-delete
   description: Delete repositories username repo slug branch restrictions
@@ -79,6 +116,22 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/branch/master/_listings/bitbucket/repositoriesusernamerepo-slugbranchrestrictionsid-parameters-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/branch/master/_listings/bitbucket/repositoriesusernamerepo-slugbranchrestrictionsid-parameters-openapi.md
+- name: Bitbucket - Update Repositories Username Repo Slug Branch Restrictions
+  x-api-slug: repositoriesusernamerepo-slugbranchrestrictionsid-put
+  description: |-
+    Updates an existing branch restriction rule.
+
+    Fields not present in the request body are ignored.
+
+    See [`POST`](../../branch-restrictions#post) for details.
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/19810-bitbucket.jpg
+  humanURL: http://bitbucket.org
+  baseURL: https://api.bitbucket.org//2.0
+  tags: Imports, Stack Network, Developers, Code, Technology, SaaS, Enterprise, Profiles,
+    Relative Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/branch/master/_listings/bitbucket/repositoriesusernamerepo-slugbranchrestrictionsid-put-openapi.md
 x-common:
 - type: x-api-gallery
   url: http://bigoven.api.gallery.streamdata.io

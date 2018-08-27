@@ -8,8 +8,8 @@ image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28120-circ
 x-kinRank: "8"
 x-alexaRank: "15983"
 tags: Branch
-created: "2018-08-25"
-modified: "2018-08-25"
+created: "2018-08-27"
+modified: "2018-08-27"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/branch/master/_listings/circleci/apis.md
 specificationVersion: "0.14"
 apis:
@@ -27,6 +27,22 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/branch/master/_listings/circleci/projectusernameprojecttreebranch-parameters-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/branch/master/_listings/circleci/projectusernameprojecttreebranch-parameters-openapi.md
+- name: CircleCI - Add Project Username Project Tree Branch
+  x-api-slug: projectusernameprojecttreebranch-post
+  description: |-
+    Triggers a new build, returns a summary of the build.
+    Optional build parameters can be set using an experimental API.
+
+    Note: For more about build parameters, read about [using parameterized builds](https://circleci.com/docs/parameterized-builds/)
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28120-circleci.jpg
+  humanURL: http://circleci.com
+  baseURL: https://circleci.com//api/v1
+  tags: Developers, Orchestration, Continuous Integration, Continuous Deployment,
+    SaaS, Technology, Enterprise, API Service Provider, Profiles, Service API, Relative
+    Data
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/branch/master/_listings/circleci/projectusernameprojecttreebranch-post-openapi.md
 x-common:
 - type: x-api-gallery
   url: http://charity.navigator.api.gallery.streamdata.io

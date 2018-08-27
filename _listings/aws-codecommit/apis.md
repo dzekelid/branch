@@ -10,8 +10,8 @@ image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/l
 x-kinRank: "10"
 x-alexaRank: "0"
 tags: Branch
-created: "2018-08-25"
-modified: "2018-08-25"
+created: "2018-08-27"
+modified: "2018-08-27"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/branch/master/_listings/aws-codecommit/apis.md
 specificationVersion: "0.14"
 apis:
@@ -28,6 +28,40 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/branch/master/_listings/aws-codecommit/actioncreatebranch-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/branch/master/_listings/aws-codecommit/actioncreatebranch-get-openapi.md
+- name: AWS CodeCommit API - Get Branch
+  x-api-slug: actiongetbranch-get
+  description: Returns information about a repository branch, including its name and
+    the last commit ID.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Developer-Tools_AWSCodeCommit.png
+  humanURL: https://aws.amazon.com/codecommit/
+  baseURL: :///
+  tags: Amazon Web Services, SDK, Orchestration, Stack Network, API Service Provider,
+    API Service Provider, API Provider, Profiles, Relative Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/branch/master/_listings/aws-codecommit/actiongetbranch-get-openapi.md
+- name: AWS CodeCommit API - List Branches
+  x-api-slug: actionlistbranches-get
+  description: Gets information about one or more branches in a repository.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Developer-Tools_AWSCodeCommit.png
+  humanURL: https://aws.amazon.com/codecommit/
+  baseURL: :///
+  tags: Amazon Web Services, SDK, Orchestration, Stack Network, API Service Provider,
+    API Service Provider, API Provider, Profiles, Relative Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/branch/master/_listings/aws-codecommit/actionlistbranches-get-openapi.md
+- name: AWS CodeCommit API - Update Default Branch
+  x-api-slug: actionupdatedefaultbranch-get
+  description: Sets or changes the default branch name for the specified repository.
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Developer-Tools_AWSCodeCommit.png
+  humanURL: https://aws.amazon.com/codecommit/
+  baseURL: :///
+  tags: Amazon Web Services, SDK, Orchestration, Stack Network, API Service Provider,
+    API Service Provider, API Provider, Profiles, Relative Data, Service API
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/branch/master/_listings/aws-codecommit/actionupdatedefaultbranch-get-openapi.md
 x-common:
 - type: x-api-gallery
   url: http://aws.codebuild.api.gallery.streamdata.io
